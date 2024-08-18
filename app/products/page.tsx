@@ -2,7 +2,7 @@ import React from "react";
 import Card from "@/components/product/Card";
 import AddToCartButton from "@/components/product/AddToCard";
 
-export async function fetchProductList() {
+async function fetchProductList() {
   try {
     const response = await fetch(
       "https://dummyjson.com/products?limit=10&skip=0&select=title,price,images,id"
