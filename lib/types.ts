@@ -14,9 +14,9 @@ export interface CartState {
 }
 
 export type CartAction =
-  | { type: "ADD_TO_CART"; payload: { item: Product } }
-  | { type: "REMOVE_FROM_CART"; payload: { id: number } }
-  | { type: "INCREMENT_QUANTITY"; payload: { id: number } }
-  | { type: "DECREMENT_QUANTITY"; payload: { id: number } }
-  | { type: "UPDATE_QUANTITY"; payload: { id: number; quantity: number } }
+  | { type: "ADD_TO_CART", payload: { item: Product } }
+  | { type: "REMOVE_FROM_CART", payload: { id: number } }
+  | { type: "INCREMENT_QUANTITY", payload: { id: number } }
+  | { type: "DECREMENT_QUANTITY", payload: { id: number } }
+  | { type: "UPDATE_QUANTITY", payload: { id: number; quantity: number } }
   | { type: "CLEAR_CART" };

@@ -8,11 +8,11 @@ interface QuantityManagerProps {
 const QuantityManager: React.FC<QuantityManagerProps> = ({ id, quantity }) => {
   const { dispatch } = useCart();
 
-  const handleIncrement = (id: number) => {
+  const handleIncrement = () => {
     dispatch({ type: "INCREMENT_QUANTITY", payload: { id } });
   };
 
-  const handleDecrement = (id: number) => {
+  const handleDecrement = () => {
     dispatch({ type: "DECREMENT_QUANTITY", payload: { id } });
   };
 
@@ -30,7 +30,7 @@ const QuantityManager: React.FC<QuantityManagerProps> = ({ id, quantity }) => {
   return (
     <div className="flex items-center space-x-2">
       <button
-        onClick={() => handleIncrement(id)}
+        onClick={handleIncrement}
         className="flex items-center justify-center w-8 h-8 border border-gray-300 text-gray-700 rounded-full hover:border-blue-500"
       >
         +
@@ -43,7 +43,7 @@ const QuantityManager: React.FC<QuantityManagerProps> = ({ id, quantity }) => {
         className="w-12 text-center border border-gray-300 rounded-md focus:outline-none focus:border-blue-500d remove-arrow"
       />
       <button
-        onClick={() => handleDecrement(id)}
+        onClick={handleDecrement}
         className="flex items-center justify-center w-8 h-8 border border-gray-300 text-gray-700 rounded-full hover:border-blue-500 disabled:opacity-50"
         disabled={quantity === 1}
       >
