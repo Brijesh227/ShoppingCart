@@ -21,3 +21,44 @@
     text-wrap: balance;
   }
 }
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-3px);
+  }
+  50% {
+    transform: translateX(3px);
+  }
+  75% {
+    transform: translateX(-3px);
+  }
+}
+
+.shake {
+  animation: shake 0.5s;
+}
+
+.remove-arrow::-webkit-inner-spin-button,
+.remove-arrow::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.remove-arrow {
+    -moz-appearance: textfield;
+}

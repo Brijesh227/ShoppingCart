@@ -48,6 +48,11 @@ export const cartReducer = (
             : item
         ),
       };
+    case "CLEAR_CART":
+      return {
+        ...state,
+        cart: [],
+      };
     default:
       return state;
   }

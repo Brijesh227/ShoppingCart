@@ -17,17 +17,21 @@ const Cart: React.FC<CartItemProps> = ({ item }) => {
   };
 
   return (
-    <div className="grid grid-cols-3 gap-4 items-center bg-white shadow rounded-lg">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center bg-white shadow-xl rounded-lg">
       <div className="col-span-1">
-        <ProductCard image={item.images[0]} name={item.title} price={item.price} />
+        <ProductCard
+          image={item.images[0]}
+          name={item.title}
+          price={item.price}
+        />
       </div>
-      <div className="col-span-1 flex justify-center">
+      <div className="col-span-1 flex md:justify-center">
         <QuantityManager id={item.id} quantity={item.quantity} />
       </div>
       <div className="col-span-1 flex justify-center">
         <button
           onClick={() => handleRemove(item.id)}
-          className="px-4 py-2 text-white bg-primary rounded"
+          className="px-4 py-2 text-white bg-primary rounded w-full md:w-auto"
         >
           Remove Item
         </button>

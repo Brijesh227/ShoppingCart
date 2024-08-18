@@ -40,7 +40,7 @@ const QuantityManager: React.FC<QuantityManagerProps> = ({ id, quantity }) => {
         value={quantity}
         onChange={handleQuantityChange}
         min="1"
-        className="w-12 text-center border border-gray-300 rounded-md focus:outline-none focus:border-blue-500d"
+        className="w-12 text-center border border-gray-300 rounded-md focus:outline-none focus:border-blue-500d remove-arrow"
       />
       <button
         onClick={() => handleDecrement(id)}
